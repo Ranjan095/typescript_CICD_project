@@ -1,7 +1,8 @@
 import express from 'express';
 import { registerUserController } from '../controllers/auth.controller';
-const authRoutes =express.Router();
+import { validateRegister } from '../middlewares/validation/auth.validation';
+const authRoutes = express.Router();
 
-authRoutes.post("/register",registerUserController)
+authRoutes.post("/register", validateRegister, registerUserController)
 
 export default authRoutes;
