@@ -93,10 +93,9 @@ export const loginUserService = async (payload: LoginDto) => {
       ]
     );
 
-    delete user.password;
 
     return {
-      user,
+      // user,
       accessToken,
       refreshToken,
     };
