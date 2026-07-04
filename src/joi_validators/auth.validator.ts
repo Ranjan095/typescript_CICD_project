@@ -55,31 +55,6 @@ export const registerSchema = Joi.object({
             "any.required": "Password is required",
         }),
 });
-// export const loginSchema = Joi.object({
-//     mobile: Joi.string()
-//         .pattern(/^[6-9]\d{9}$/)
-//         .required()
-//         .messages({
-//             "string.pattern.base": "Invalid mobile number",
-//             "string.empty": "Mobile number is required",
-//             "any.required": "Mobile number is required",
-//         }),
-
-//     password: Joi.string()
-//         .min(8)
-//         .pattern(
-//             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).+$/
-//         )
-//         .required()
-//         .messages({
-//             "string.min": "Password must be at least 8 characters",
-//             "string.pattern.base":
-//                 "Password must contain uppercase, lowercase, number, and special character",
-//             "string.empty": "Password is required",
-//             "any.required": "Password is required",
-//         }),
-// });
-
 
 export const loginSchema = Joi.object({
   mobile: Joi.string()
